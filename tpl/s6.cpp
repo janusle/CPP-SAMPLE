@@ -1,3 +1,4 @@
+// Example of usage of copy constructor for class template 
 #include<iostream>
 
 using namespace std;

@@ -1,3 +1,4 @@
+// Multiple types with class templates
 #include<iostream>
 
 using namespace std;
