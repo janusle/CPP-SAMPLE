@@ -10,11 +10,23 @@ class TestClass
     {
         cout << i << endl;
     }
+
+    static void test1(int i)
+    {
+        cout << i << endl;
+    }
+
 };
 
 int main()
 {
     TestClass t;
-    boost::bind( &TestClass::test, &t, 3 )();
+
+    cout << (void*)&TestClass::test << endl;
+
+    cout << (void*)TestClass::test1 << endl;
+
+    cout << (void*)&TestClass::test1 << endl;
+
     return 0;
 }
