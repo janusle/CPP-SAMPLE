@@ -22,11 +22,7 @@ int main()
 {
     TestClass t;
 
-    cout << (void*)&TestClass::test << endl;
-
-    cout << (void*)TestClass::test1 << endl;
-
-    cout << (void*)&TestClass::test1 << endl;
+    boost::bind( &TestClass::test, 3)();
 
     return 0;
 }
