@@ -1,14 +1,16 @@
 CC=g++
-FLAG=-lboost_thread-mt -lboost_system-mt -pthread
+LIB=../boost/lib/libboost_system.a ../boost/lib/libboost_thread.a
+FLAG=-I ../boost -pthread
 
-all: post s1
+all: s1 strand
 
 s1:
-	$(CC) -o s1 s1.cpp $(FLAG)
+	$(CC) -o s1 s1.cpp $(LIB) $(FLAG)
 
-post:
-	$(CC) -o post post.cpp $(FLAG)
+strand:
+	$(CC) -o strand strand.cpp $(LIB) $(FLAG)
+
 
 clean:
-	-rm post
+	-rm s1 strand
 
